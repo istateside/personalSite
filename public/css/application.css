@@ -1,0 +1,121 @@
+body, h1, li, ul, a, h3, div {
+  font-style: inherit;
+  text-decoration: none;
+  font-size: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: block;
+  font-family: sans-serif;
+}
+
+.group:after {
+  content: "";
+  height: 0;
+  display: block;
+  clear: both;
+}
+
+/* HEADER */
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+ul.contacts {
+  display: block;
+  align: center;
+  width: 30%;
+  margin: 0 auto;
+}
+
+ul.contacts li {
+  margin: 30px;
+  height: 15px;
+  width: 40px;
+  display: inline-block;
+}
+
+.header {
+  background: gray;
+}
+
+p.intro {
+  width: 100%;
+  padding-top: 30px;
+  margin: 40px auto;
+  text-align: center;
+  line-height: 40px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,1) 20%
+  );
+}
+
+/* PORTFOLIO */
+div.left-col {
+  box-sizing: border-box;
+  width: 30%;
+  background: green;
+  height: 500px;
+  float: left;
+}
+
+div.right-col {
+  box-sizing: border-box;
+  width: 60%;
+  float: right;
+  border-left: 1px solid black;
+  margin: 0 20px 40px 20px;
+}
+
+div.portfolio-box {
+  border: 1px solid black;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  width: 800px;
+  height: 150px;
+  float: right;
+}
+
+div.portfolio-box:first-child {
+  margin-top: 20px;
+}
+
+div.link-box {
+  float: left;
+  height: 100%;
+}
+
+a.work-preview {
+  display: block;
+  border: 1px solid red;
+  border-radius: 3px;
+  width: 148px;
+  height: 100px;
+  background: none;
+  transition: background 200ms;
+}
+
+a.work-preview:hover {
+  background: red;
+}
+
+div.work-desc {
+  box-sizing: border-box;
+  float: left;
+  width: 650px;
+  padding-left: 50px;
+}
+
+div.work-desc h3 {
+  font-size: 24px;
+}
+
+ul.portfolio {
+  margin-left: 200px;
+}
