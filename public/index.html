@@ -4,6 +4,7 @@
   <title>Kevin Fleischman</title>
   <link href="css/application.css" rel="stylesheet" type="text/css" media="all">
   <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+  <script src="js/jquery-2.1.1.min.js"></script>
 </head>
 
 <body>
@@ -34,8 +35,8 @@
         </li>
       </ul>
     </div>
-    <p class="intro">I'm a web developer operating out of Long Island and New York City.
-      <br>A former teacher, I was driven to programming by a desire to create and connect people. I'm passionate about learning, teaching, and creating.
+    <p class="intro">I'm a web developer operating out of New York.
+      <br>I was driven to programming by a desire to create and connect people. As a former teacher, I draw my passion from learning, teaching, and creating.
       <br>Most of my experience is in Ruby on Rails and Backbone.js, but I'm always looking for a new challenge.</p>
   </div>
 
@@ -55,59 +56,84 @@
 
       <div class="right-col group">
 
-        <div class="portfolio-box group">
+        <div class="portfolio-box with-video group">
           <div class="link-box">
-            <a class="work-preview" href="http://troopr.herokuapp.com"></a>
+            <a class="work-preview" href="http://troopr.herokuapp.com">
+
+              <video src="images/Troopr-prev.mp4" width="170" loop="true"></video>
+            </a>
           </div>
           <div class="work-desc">
-            <h3>Troopr</h3>
-            <p>Tumblr clone designed for the mid-20s Stormtrooper demographic.</p>
+            <h3>Troopr
+              <a id="portfolio-git" href="https://www.github.com/istateside/Troopr">
+                <img src="images/github-dark.png" height=32>
+              </a>
+            </h3>
+            <p>Tumblr clone designed for the mid-20s Stormtrooper demographic. Built with Backbone.js and a Rails JSON API.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-box with-video group">
+          <div class="link-box">
+            <a
+              class="work-preview"
+                href="https://shielded-depths-8818.herokuapp.com/">
+                <video src="images/Blasteroids-prev.mp4" width="170" loop="true"></video>
+            </a>
+          </div>
+          <div class="work-desc">
+            <h3>Blasteroids
+              <a id="portfolio-git" href="https://www.github.com/istateside/Blasteroids">
+                <img src="images/github-dark.png" height=32>
+              </a>
+            </h3>
+            <p>An Asteroids clone built in HTML5, using vector math and Canvas.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-box with-video group">
+          <div class="link-box">
+            <a class="work-preview" href="https://chellooo.herokuapp.com/">
+            <video src="images/Chellooo-prev.mp4" width="170" loop="true"></video>
+            </a>
+          </div>
+          <div class="work-desc">
+            <h3>Chellooooo
+              <a id="portfolio-git" href="https://www.github.com/istateside">
+                <img src="images/github-dark.png" height=32>
+              </a>
+            </h3>
+            <p>A Trello clone, for organizing and collaborating complex jobs between teams. Utilizes jQueryUI for sorting of DOM elements.</p>
           </div>
         </div>
 
         <div class="portfolio-box group">
           <div class="link-box">
-            <a class="work-preview" href="https://shielded-depths-8818.herokuapp.com/"></a>
+            <a class="work-preview" href="https://github.com/istateside/ActiveRecordLite">
+              <img src="images/activerec-preview.png" width="170">
+            </a>
           </div>
           <div class="work-desc">
-            <h3>Blasteroids</h3>
-            <p>An Asteroids clone built in HTML5.</p>
+            <h3>ActiveRecordLite
+              <a id="portfolio-git" href="https://www.github.com/istateside/ActiveRecordLite">
+                <img src="images/github-dark.png" height=32>
+              </a>
+            </h3>
+            <p>ActiveRecord, made from the ground up, to help me better understand how ActiveRecord and Rails serves up content.</p>
           </div>
         </div>
-
-        <div class="portfolio-box group">
-          <div class="link-box">
-            <a class="work-preview" href="https://chellooo.herokuapp.com/"></a>
-          </div>
-          <div class="work-desc">
-            <h3>Chellooooo</h3>
-            <p>A Trello clone, for organizing and collaborating complex jobs between teams.</p>
-          </div>
-        </div>
-
-        <div class="portfolio-box group">
-          <div class="link-box">
-            <a class="work-preview" href="https://github.com/istateside/ActiveRecordLite"></a>
-          </div>
-          <div class="work-desc">
-            <h3>RailsLite</h3>
-            <p>Ruby on Rails, made from the ground up, to help me better understand how ActiveRecord and Rails serves up content.</p>
-          </div>
-        </div>
-<!--
-        <div class="portfolio-box group">
-          <div class="link-box">
-            <a class="work-preview" href="https://github.com/istateside/ActiveRecordLite"></a>
-          </div>
-          <div class="work-desc">
-            <h3>nodeChat</h3>
-            <p>A chatroom app, utilizing the node.js framework.</p>
-          </div>
-        </div>
-      </div> -->
-
     </div>
   </main>
 </body>
 
+
+<script>
+  $(function() {
+    $('.portfolio-box.with-video').hover(function(e) {
+      $(e.currentTarget).find('video')[0].play();
+    },function(e) {
+      $(e.currentTarget).find('video')[0].pause();
+    });
+  });
+</script>
 </html>

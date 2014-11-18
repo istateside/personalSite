@@ -142,8 +142,8 @@ div.link-box {
 }
 
 a.work-preview {
+  background: black;
   display: block;
-  border: 1px solid red;
   width: 170px;
   height: 150px;
   margin-top: -1px;
@@ -151,8 +151,19 @@ a.work-preview {
   transition: background 500ms;
 }
 
-a.work-preview:hover {
-  background: red;
+video {
+  image-fit: fill;
+  margin: 28px 0;
+}
+a.work-preview img {
+  margin: 11px 0;
+}
+
+a#portfolio-git {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  left: 10px;
 }
 
 div.work-desc {
