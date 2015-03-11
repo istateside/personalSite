@@ -9,6 +9,7 @@ body, h1, li, ul, a, h3, div {
   display: block;
   font-family: 'Lato', sans-serif;
   background: none;
+  box-sizing: border-box;
 }
 
 .group:after {
@@ -26,17 +27,14 @@ body {
 /* HEADER */
 
 .header {
-  padding-top: 200px;
-  height: 475px;
+  padding-top: 100px;
   color: white;
-  padding-bottom: 100px;
 }
 
 h1 {
   font-size: 70px;
   text-align: center;
   position: relative;
-  bottom: 40px;
   font-weight: bold;
 }
 
@@ -45,11 +43,11 @@ ul.contacts {
   align: center;
   width: 380px;
   margin: 0 auto;
-
+  text-align: center;
 }
 
 ul.contacts li {
-  margin: 30px;
+  margin: 30px 15px;
   height: 32px;
   width: 32px;
   display: inline-block;
@@ -75,19 +73,18 @@ ul.contacts li#github-link {
   border-radius: 50%;
 }
 p.intro {
-  width: 100%;
+  width: 85%;
+  padding: 0 20px;
   padding-top: 60px;
   text-align: center;
   line-height: 40px;
-  position: absolute;
-
+  margin: 0 auto;
 }
 
 /* PORTFOLIO */
 
 main.main-content {
   position: relative;
-  bottom: 100px;
 }
 
 div.col-space {
@@ -99,28 +96,31 @@ div.col-space {
     rgba(255,255,255,0.99) 90%,
     rgba(255,255,255,0) 100%
   );
+  white-space: nowrap;
 }
 
 div.left-col {
+  vertical-align: top;
   background: transparent;
   box-sizing: border-box;
   color: black;
+  display: inline-block;
   width: 30%;
   padding: 20px;
-  height: 500px;
-  float: left;
-  margin-top: 300px;
-  margin-left: 30px;
-
+  margin-top: 100px;
+  padding-left: 30px;
 }
 
 div.right-col {
   background: transparent;
   box-sizing: border-box;
-  width: 60%;
-  float: right;
-  padding-left: 20px;
-  margin: 150px 20px 40px 20px;
+  width: 70%;
+  display: inline-block;
+  margin: 50px 0 40px 0;
+}
+
+div.left-col, div.right-col {
+  white-space: normal;
 }
 
 div.portfolio-box {
@@ -129,7 +129,7 @@ div.portfolio-box {
   width: 100%;
   min-width: 575px;
   height: 150px;
-  float: right;
+  white-space: nowrap;
 }
 
 div.portfolio-box:first-child {
@@ -137,7 +137,8 @@ div.portfolio-box:first-child {
 }
 
 div.link-box {
-  float: left;
+  width: 30%;
+  display: inline-block;
   height: 100%;
 }
 
@@ -146,8 +147,6 @@ a.work-preview {
   display: block;
   width: 170px;
   height: 150px;
-  margin-top: -1px;
-  margin-left: -1px;
   transition: background 500ms;
 }
 
@@ -157,6 +156,7 @@ video {
 }
 a.work-preview img {
   margin: 11px 0;
+  width: 170px;
 }
 
 a#portfolio-git {
@@ -168,10 +168,12 @@ a#portfolio-git {
 
 div.work-desc {
   box-sizing: border-box;
-  float: left;
+  display: inline-block;
   width: 70%;
-  padding-left: 50px;
+  padding-left: 15px;
   margin-top: 24px;
+  vertical-align: top;
+  white-space: normal;
 }
 
 div.work-desc h3 {
@@ -180,4 +182,72 @@ div.work-desc h3 {
 
 ul.portfolio {
   margin-left: 200px;
+}
+
+video {
+  width: 100%;
+}
+
+@media handheld, screen and (max-width: 900px) {
+
+  p.intro {
+    padding: 0;
+    width: 90%;
+  }
+
+  div.left-col, div.right-col {
+    width: 100%;
+    display: block;
+    padding: 20px;
+  }
+
+  div.left-col {
+    margin-top: 0;
+  }
+
+  div.right-col {
+    margin: 0;
+  }
+
+  div.work-desc {
+    margin-top: 10px;
+  }
+}
+
+@media handheld, screen and (max-width: 620px) {
+  div.col-space {
+
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,0.99) 15%,
+      rgba(255,255,255,0.99) 95%,
+      rgba(255,255,255,0) 100%
+    );
+  }
+
+  div.portfolio-box {
+    min-width: 0;
+    height: auto;
+    margin-bottom: 90px;
+  }
+
+  div.link-box, div.work-desc {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+
+  div.work-desc {
+    padding-bottom: 10px;
+  }
+
+  a.work-preview {
+    width: auto;
+    height: auto;
+  }
+
+  a.work-preview img {
+    width: 100%;
+  }
 }
