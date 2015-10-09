@@ -149,6 +149,11 @@ a.work-preview {
   transition: background 500ms;
 }
 
+a.work-preview > * {
+  width: 100% !important;
+  height: 100% !important;
+}
+
 video {
   image-fit: fill;
   margin: 28px 0;
