@@ -54,7 +54,7 @@ ul.contacts li {
 }
 
 .intro {
-  width: 85%;
+  width: 90%;
   font-size: 1.4rem;
   text-align: center;
   line-height: 2.5rem;
@@ -70,7 +70,12 @@ ul.contacts li {
 }
 
 @media screen and (max-width: 767px) {
+  ul.contacts {
+    margin: 2rem auto;
+  }
+
   .intro {
     font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
